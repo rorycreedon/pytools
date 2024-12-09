@@ -10,3 +10,8 @@ repos:
     rev: v1.13.0 # or whatever the latest version is at the time
     hooks:
     -   id: basedpyright
+
+-   repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.5.7
+    hooks:
+    -   id: uv-lock
