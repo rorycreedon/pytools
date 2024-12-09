@@ -8,3 +8,11 @@ dependencies = []
 
 [tool.uv]
 dev-dependencies = ["pre-commit>=4.0.1", "basedpyright>=1.22.1"]
+
+[tool.ruff]
+line-length = 88 # same as black
+indent-width = 4
+
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
