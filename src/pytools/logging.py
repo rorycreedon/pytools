@@ -20,7 +20,10 @@ class CustomFormatter(logging.Formatter):
     reset: str = "\x1b[0m"
 
     # Fixed-width log level (8 characters for alignment)
-    log_format: str = "%(asctime)s.%(msecs)03d || %(levelname)-8s || %(module)s:%(funcName)s:%(lineno)d || %(message)s"
+    log_format: str = (
+        "%(asctime)s.%(msecs)03d || %(levelname)-8s || "
+        "%(module)s:%(funcName)s::%(lineno)d || %(message)s"
+    )
     date_format: str = "%Y-%m-%d %H:%M:%S"
 
     FORMATS: dict[int, str] = {
